@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*Murat Can Abay*/
+/*	Murat Can Abay	      */
 /*Istanbul Commerce University*/
 
 int findMax(int array[],int number_of_elements){
