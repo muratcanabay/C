@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-/* Murat Can Abay */
+/* 	 Murat Can Abay 	*/
 /* Istanbul Commerce University */
 void bubbleSort(int array[],int num)
 {
