@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
-
-
+/*	Murat Can Abay	      */
+/*Istanbul Commerce University*/
 long int fibonacci(int n){
 
 	if(n==1 || n==2)
