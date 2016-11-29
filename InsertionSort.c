@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #define SIZE 10
+/*	Murat Can Abay 	      */
+/*Istanbul Commerce University*/
 
 void display(int array[]);
 void insertionSort(int array[],int size);
