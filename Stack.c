@@ -1,25 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define SIZE 5
-/*       Murat Can Abay       */
-/*Istanbul Commerce University*/
 
 int array[SIZE];
 int top = 0;
 
 int pop()
 {
-	return array[--top];			//Shows last element added into the stack.
+	//Shows last element added into the stack.
+	return array[--top];
 }
 
 void push(int data)
 {
-	if(top >= SIZE)
+	if (top >= SIZE)
 	{
-		printf("STACK IS ALREADY FULL\n");	
-	}else
+		printf("STACK IS ALREADY FULL\n");
+	}
+	else
 	{
-		array[top++] = data;		//Push into the stack and increase top by one.
+		//Pushes into the stack and increases top by one.
+		array[top++] = data;
 	}
 }
 
@@ -28,12 +29,11 @@ void printStack()
 	int i = 0;
 	printf("\n");
 
-	for(i;i<top;i++)
-		printf("%d ",array[i]);		//Prints all elements of stack.
-	
+	for (i; i < top; i++)
+		printf("%d ", array[i]);
+
 	printf("\n");
 }
-
 
 int main()
 {
@@ -44,8 +44,8 @@ int main()
 	push(9);
 	push(-3);
 	push(22);
-	printStack();	
-	printf("\nPop = %d",pop());
-	printf("\nPop = %d",pop());
+	printStack();
+	printf("\nPop = %d", pop());
+	printf("\nPop = %d", pop());
 	printf("\n");
 }

@@ -1,69 +1,73 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "SinglyLinkedList.h"
-/*       Murat Can Abay       */
-/*Istanbul Commerce University*/
 
 int main()
 {
-	node *root;		//First pointer of the list
-	
-	root = (node*)malloc(sizeof(node));
-	root -> data = 24;
-	
+	node *root; //First pointer of the list
+
+	root = (node *)malloc(sizeof(node));
+	root->data = 24;
+
 	addEnd(root, 11);
 	addEnd(root, 13);
 	addEnd(root, 96);
 	addEnd(root, 99);
 	printList(root);
-	delete(root,96);
-	printf("\nAfter deletion 96\n");
+	delete (root, 96);
+	printf("\nAfter deleting 96\n");
 	printList(root);
-		
+
 	return 0;
 }
 
 void printList(node *head)
 {
-	if(head == NULL)		//If list is empty
+	//If list is empty
+	if (head == NULL)
 	{
-		return ;
+		return;
 	}
-	else	printf("\n%d\n", head -> data);
-		printList(head -> next);	//Recursive
+	else
+		printf("\n%d\n", head->data);
+	printList(head->next); //Recursive
 }
 
 void addEnd(node *head, int data)
-{	
-	while(head -> next != NULL)	//Go end of the list
+{
+	//Go end of the list
+	while (head->next != NULL)
 	{
-		head = head -> next;
+		head = head->next;
 	}
-	
-	head -> next = (node*)malloc(sizeof(node));	//Allocate new node for the new data
-	head = head -> next;
-	head -> data = data;
-	head -> next = NULL;						//Do new data's pointer NULL
+
+	//Allocate new node for the new data
+	head->next = (node *)malloc(sizeof(node));
+	head = head->next;
+	head->data = data;
+	//Do new data's pointer NULL
+	head->next = NULL;
 }
 
-int delete(node *head, int key)
+int delete (node *head, int key)
 {
 	struct node *temp, *previous;
 	temp = head;
-	
-	while(temp != NULL)
+
+	while (temp != NULL)
 	{
-		if(temp -> data == key)
+		if (temp->data == key)
 		{
-			if(temp == head)				//If key value is root
+			//If key value is root
+			if (temp == head)
 			{
-				head = temp -> next;
+				head = temp->next;
 				free(temp);
 				return 1;
 			}
 			else
 			{
-				previous -> next = temp ->next;
+				previous->next = temp->next;
 				free(temp);
 				return 1;
 			}
@@ -71,7 +75,7 @@ int delete(node *head, int key)
 		else
 		{
 			previous = temp;
-			temp = temp -> next;
+			temp = temp->next;
 		}
 	}
 	return 0;
